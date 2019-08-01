@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700|Open+Sans:400,700&display=swap');
+body {
+    margin: 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3,
+h5 {
+    text-align: center;
+}
+
+.leftbar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.right {
+    display: flex;
+    flex-flow: column;
+    margin-left: 250px;
+    background-color: darkgrey;
+}
+
+.sticker {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.sticker img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+`
