@@ -11,15 +11,17 @@ h5 {
 }
 
 .leftbar {
+    z-index: 999;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    padding-top: 150px;
     align-items: center;
     position: fixed;
     left: 0px;
     top: 0px;
     width: 200px;
     height: 100%;
+    background-color: rgb(247, 247, 247);
 }
 
 .content {
@@ -27,11 +29,14 @@ h5 {
     flex-flow: column nowrap;
 }
 
-.right {
-    display: flex;
-    flex-flow: column;
-    margin-left: 250px;
-    background-color: red;
+.content a,
+.content a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.content a:hover {
+    color: blue;
 }
 
 .sticker {
@@ -45,6 +50,15 @@ h5 {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
+.right {
+    height: 100%;
+    /* width:100%; */
+    display: flex;
+    flex-flow: column;
+    margin-left: 200px;
+}
+
+.h1 {
+    margin-top: -250px;
+    margin-left: 50px;
 }
