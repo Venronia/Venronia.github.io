@@ -196,7 +196,7 @@
             /* SKILLS */
             
             #skills {
-                margin-top: 5%;
+                padding-top: 5%;
             }
             
             #skills>.div1 {
@@ -235,7 +235,7 @@
             /* EDUCATION */
             
             #education {
-                margin-top: 5%;
+                padding-top: 5%;
             }
             
             #education>div {
