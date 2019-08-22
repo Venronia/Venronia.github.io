@@ -3,9 +3,24 @@
 <head>
     <title>Venronia</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+    <div id="popup">
+        <div class="message-container">
+            <i onclick="closePopup();">X</i>
+            <div class="div2">
+                <input type="text" placeholder="NAME">
+                <input type="email" placeholder="EMAIL">
+                <input type="text" placeholder="SUBJECT">
+                <textarea placeholder="MESSAGE"></textarea>
+                <input onclick="closePopup();" class="ok" type="submit" value="OK">
+            </div>
+        </div>
+    </div>
     <div id="all">
         <!-- 目錄 -->
         <div id="content">
@@ -35,11 +50,12 @@
                 <!-- HOME -->
                 <div id="home">
 
-                    <div>
+                    <div class="showtitle">
+
                         <h1>
                             Hi! I am Venronia.
                         </h1>
-                        <a href=""><button>Contact Me</button></a>
+                        <button onclick="openPopup();">Contact Me</button>
                     </div>
 
                 </div>
@@ -47,7 +63,7 @@
                 <div id="about">
                     <h1>WHO AM I</h1>
                     <p>Hi, I am Venronia Chen.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
-                    <div class="div1">
+                    <div class="div1 hideme">
                         <div>
                             <h3>Web Design</h3>
                             <div>
@@ -279,7 +295,7 @@
                     <div id="work">
                         <h1>WORK</h1>
                         <div class="div1">
-                            <a href="" id="webdesign">Web Design</a>
+                            <a id="webdesign">Web Design</a>
                             <a href="" id="apps">Apps</a>
                         </div>
                         <div class="div2">
@@ -337,64 +353,72 @@
                                     <div> <button>L</button> <button>LIKE</button> <button>VIEW</button></div>
                                 </div>
                             </div>
-
                         </div>
 
-                    </div>
-                    <!-- BLOG -->
-                    <div id="blog">
-                        <h1>BLOG</h1>
-                        <div class="div1">
-                            <div>
-                                <a href="">
-                                    <div><img src="img/img-6.jpg" alt=""></div>
-                                    <h3>BLOG1</h3>
-                                </a>
-                                <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
-
-                            </div>
-
-                            <div>
-                                <a href="">
-                                    <div><img src="img/img-6.jpg" alt=""></div>
-                                    <h3>BLOG1</h3>
-                                </a>
-                                <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
-
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div><img src="img/img-6.jpg" alt=""></div>
-                                    <h3>BLOG1</h3>
-                                </a>
-                                <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CONTACT -->
-                    <h3>CONTACT</h3>
-                    <div>
-                        <div>
-                            <div><img src="" alt=""></div>
-                            <h3>email@example.com</h3>
-                        </div>
-                        <div>
-                            <div><img src="" alt=""></div>
-                            <h3>PHONE NUMBER</h3>
-                        </div>
-                        <div>
-                            <div><img src="" alt=""></div>
-                            <h3>LINE</h3>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="text"><input type="email"><input type="text"><input type="text"><input type="submit">
                     </div>
                 </div>
+                <!-- BLOG -->
+                <div id="blog">
+                    <h1>BLOG</h1>
+                    <div class="div1">
+                        <div>
+                            <a href="">
+                                <div><img src="img/img-6.jpg" alt=""></div>
+                                <h3>BLOG1</h3>
+                            </a>
+                            <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
 
+                        </div>
+
+                        <div>
+                            <a href="">
+                                <div><img src="img/img-6.jpg" alt=""></div>
+                                <h3>BLOG1</h3>
+                            </a>
+                            <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
+
+                        </div>
+                        <div>
+                            <a href="">
+                                <div><img src="img/img-6.jpg" alt=""></div>
+                                <h3>BLOG1</h3>
+                            </a>
+                            <p>OOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- CONTACT -->
+                <div id="contact">
+                    <h3>CONTACT</h3>
+                    <div>
+                        <div class="div1">
+                            <div>
+                                <div class="icon"><img src="img/e-mail-envelope.png" alt="" width="100%"></div>
+                                <h3>venroniagranger@gmail.com</h3>
+                            </div>
+                            <div>
+                                <div class="icon"><img src="img/icon.png" alt="" width="100%"></div>
+                                <h3></h3>
+                            </div>
+                            <div>
+                                <div class="icon"><img src="img/line (1).png" alt="" width="100%"></div>
+                                <h3>venronia</h3>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <input type="text" placeholder="NAME">
+                            <input type="email" placeholder="EMAIL">
+                            <input type="text" placeholder="SUBJECT">
+                            <textarea placeholder="MESSAGE"></textarea>
+                            <input class="ok" type="submit" value="OK">
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
+    </div>
     </div>
 </body>
 
